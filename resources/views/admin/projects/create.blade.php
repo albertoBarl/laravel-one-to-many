@@ -13,6 +13,14 @@
                 <label for="content" class="form-label">Content</label>
                 <textarea rows="5" class="form-control" name="content"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Types</label>
+                <select name="type_id" id="type_id">
+                    @foreach ($types as $item)
+                        <option value="{{ $item->id }}"> {{ $item->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Add project</button>
             </div>

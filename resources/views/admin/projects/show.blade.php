@@ -6,5 +6,7 @@
         <h3 class="bg-dark text-white p-3 rounded">{{ $project->title }}</h3>
         Contenuto:
         <p class="bg-dark text-white p-3 rounded">{{ $project->content }}</p>
+        Tipo:
+        <p class="bg-dark text-white p-3 rounded"> {{ $project->type->name ?? 'Nessun tipo' }}</p>
     </div>
 @endsection
