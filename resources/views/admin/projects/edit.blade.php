@@ -16,8 +16,9 @@
             <div class="mb-3">
                 <label for="type_id" class="form-label">Types</label>
                 <select name="type_id" id="type_id">
+                    <option value="">Seleziona categoria</option>
                     @foreach ($types as $item)
-                        <option value="{{ old('type_id', $project) }}"> {{ $item->name }}</option>
+                        <option value="{{ $item->id }}"> {{ $item->name }}</option>
                     @endforeach
                 </select>
             </div>
