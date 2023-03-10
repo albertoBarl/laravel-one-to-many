@@ -18,7 +18,9 @@
                 <select name="type_id" id="type_id">
                     <option value="">Seleziona categoria</option>
                     @foreach ($types as $item)
-                        <option value="{{ $item->id }}"> {{ $item->name }}</option>
+                        <option value="{{ $item->id }}"
+                            {{ $item->id == old('type_id', $project->type_id) ? 'selected' : '' }}> {{ $item->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
