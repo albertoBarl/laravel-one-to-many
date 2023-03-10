@@ -5,6 +5,7 @@
         <form action="{{ route('admin.projects.update', ['project' => $project->slug]) }}" method="POST"
             class="d-flex flex-column justify-content-center p-5">
             @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" name="title" value="{{ old('title', $project) }}">
